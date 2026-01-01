@@ -19,9 +19,9 @@ Since this project has both a `backend` and `frontend`, you must configure the *
 
 ### **Backend (Railway.app)**
 1. Connect your repo.
-2. Go to **Settings** -> **General** -> **Root Directory**.
-3. Set it to: `backend`
-4. Railway will automatically use the `railway.json` and `requirements.txt` inside that folder.
+2. Ensure **Root Directory** is empty (or set to `/`).
+3. Railway will automatically detect the **Dockerfile** and build the entire monorepo correctly.
+4. Set the **Environment Variable** `PORT` to `8000` (optional, Railway handles this automatically).
 
 ### **Frontend (Vercel)**
 1. Connect your repo.
