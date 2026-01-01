@@ -6,11 +6,8 @@ import uvicorn
 
 app = FastAPI()
 
-# Allow CORS for React Frontend (usually runs on port 5173 or 3000)
-origins = [
-    "http://localhost:5173",
-    "http://localhost:3000",
-]
+# Allow CORS for all origins for deployment ease
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
