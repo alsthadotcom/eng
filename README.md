@@ -13,7 +13,25 @@ Double-click the `run.bat` file in the `web_app` directory. This will:
 ### 2. Manual Way
 If you prefer running them manually:
 
-#### **Backend**
+## 🌍 Cloud Deployment (Monorepo Instructions)
+
+Since this project has both a `backend` and `frontend`, you must configure the **Root Directory** for each service:
+
+### **Backend (Railway.app)**
+1. Connect your repo.
+2. Go to **Settings** -> **General** -> **Root Directory**.
+3. Set it to: `backend`
+4. Railway will automatically use the `railway.json` and `requirements.txt` inside that folder.
+
+### **Frontend (Vercel)**
+1. Connect your repo.
+2. During setup, look for **Root Directory**.
+3. Click **Edit** and select the `frontend` folder.
+4. Set the **Environment Variable** `VITE_API_URL` to your Railway URL.
+
+---
+
+#### **Backend (Local)**
 1. Open a terminal in `web_app/backend`.
 2. Run: `python main.py`
 3. The API will be available at `http://localhost:8000`.
