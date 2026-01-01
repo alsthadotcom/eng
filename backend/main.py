@@ -4,6 +4,8 @@ from scraper import get_full_word_data
 import os
 import uvicorn
 
+app = FastAPI()
+
 # Allow CORS for React Frontend (usually runs on port 5173 or 3000)
 origins = [
     "http://localhost:5173",
